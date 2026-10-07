@@ -1,0 +1,65 @@
+{
+  "name": "psst",
+  "displayName": "Phone Notices",
+  "version": "0.3.4",
+  "description": "For the Claude Code desktop app on Windows with an Android phone: icons of the apps that have notifications on your phone above the prompt, a count, and /phone to read them; /phone notices on adds a short notice when one arrives. Reads what Windows Phone Link already stores on the PC; makes no network requests and passes no notification content to Claude.",
+  "author": {
+    "name": "Mxhlix",
+    "email": "contact@found-tools.com",
+    "url": "https://github.com/Mxhlix"
+  },
+  "homepage": "https://github.com/Mxhlix/psst",
+  "repository": "https://github.com/Mxhlix/psst",
+  "documentationUrl": "https://github.com/Mxhlix/psst#readme",
+  "supportUrl": "https://github.com/Mxhlix/psst/issues",
+  "privacyPolicyUrl": "https://github.com/Mxhlix/psst/blob/main/PRIVACY.md",
+  "license": "MIT",
+  "keywords": [
+    "mod",
+    "notifications",
+    "android",
+    "windows",
+    "phone-link"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "apps": {
+      "type": "string",
+      "title": "Only these apps",
+      "description": "Comma-separated app names or Android package names to show, matched whole and ignoring case (for example: Gmail, com.google.android.gm). Empty shows every app.",
+      "default": ""
+    },
+    "ignore": {
+      "type": "string",
+      "title": "Ignore these apps",
+      "description": "Comma-separated app names or package names never to show, matched the same way. An app in both lists is ignored.",
+      "default": "com.microsoft.appmanager"
+    },
+    "content": {
+      "type": "string",
+      "title": "Notification text",
+      "description": "show: the title and text appear in notices and the pane. hide: a notice shows only the app and 'new notification', a card the icon, the app, the time and 'New notification', and the title and text are dropped before anything is kept in session state.",
+      "options": [
+        "show",
+        "hide"
+      ],
+      "default": "show"
+    },
+    "ongoing": {
+      "type": "string",
+      "title": "Playback and ongoing notifications",
+      "description": "hide: leave out playback controls (a video or music app) and notifications the phone keeps up while something runs; the /phone pane says how many were left out. show: count them and give them short notices like any other.",
+      "options": [
+        "hide",
+        "show"
+      ],
+      "default": "hide"
+    },
+    "databaseFolder": {
+      "type": "string",
+      "title": "Phone Link database folder",
+      "description": "Leave empty to use the first phone folder found. Set it only if you link more than one phone, to the folder ...\\LocalCache\\Indexed\\<phone>\\System\\Database.",
+      "default": ""
+    }
+  }
+}

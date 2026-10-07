@@ -1,0 +1,6 @@
+{
+  "name": "psst",
+  "description": "Phone Notices: your Android phone's notifications inside Claude Code on Windows.",
+  "owner": { "name": "Mxhlix", "email": "contact@found-tools.com" },
+  "plugins": [{ "name": "psst", "source": "./" }]
+}
