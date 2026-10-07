@@ -110,14 +110,14 @@ const USAGE = 'Use /phone to open the notifications pane, or /phone notices on o
 const NOTICES = 'notices'
 
 async function setNotices($: EngineInterface, w: Watch, value: 'on' | 'off'): Promise<string> {
-  const on = value === 'on'
-  const already = w.showToasts === on
+  const turnOn = value === 'on'
+  const already = w.showToasts === turnOn
   // Written even when this session already had it, since another session may
   // have stored the other value since this one started.
   await $.store.set(NOTICES, value)
-  w.showToasts = on
+  w.showToasts = turnOn
   if (already) return `Short notices are already ${value}.`
-  return on
+  return turnOn
     ? 'Short notices turned on: one shows for 8 seconds when a notification arrives.'
     : 'Short notices turned off.'
 }

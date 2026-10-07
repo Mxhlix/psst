@@ -1,7 +1,7 @@
 {
   "name": "psst",
   "displayName": "Phone Notices",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "For the Claude Code desktop app on Windows with an Android phone: icons of the apps that have notifications on your phone above the prompt, a count, and /phone to read them; /phone notices on adds a short notice when one arrives. Reads what Windows Phone Link already stores on the PC; makes no network requests and passes no notification content to Claude.",
   "author": {
     "name": "Mxhlix",
@@ -39,20 +39,12 @@
       "type": "string",
       "title": "Notification text",
       "description": "show: the title and text appear in notices and the pane. hide: a notice shows only the app and 'new notification', a card the icon, the app, the time and 'New notification', and the title and text are dropped before anything is kept in session state.",
-      "options": [
-        "show",
-        "hide"
-      ],
       "default": "show"
     },
     "ongoing": {
       "type": "string",
       "title": "Playback and ongoing notifications",
       "description": "hide: leave out playback controls (a video or music app) and notifications the phone keeps up while something runs; the /phone pane says how many were left out. show: count them and give them short notices like any other.",
-      "options": [
-        "hide",
-        "show"
-      ],
       "default": "hide"
     },
     "databaseFolder": {
