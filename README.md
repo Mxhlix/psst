@@ -1,4 +1,4 @@
-# psst (Phone Notices)
+# Psst!
 
 The name is *psst*, the quiet sound you make to catch someone's attention. The count at the bottom right reads `psst 📱 3`: your phone has something for you.
 

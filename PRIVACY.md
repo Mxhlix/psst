@@ -1,6 +1,6 @@
 # Privacy
 
-psst (Phone Notices) is a Claude Code mod for the Claude Code desktop app on Windows. It shows which apps on your Android phone have notifications and lets you read them inside Claude Code. This page says what it reads, what it keeps, what it sends and what Claude receives. It describes psst 0.3.0 and later.
+psst is a Claude Code mod for the Claude Code desktop app on Windows. It shows which apps on your Android phone have notifications and lets you read them inside Claude Code. This page says what it reads, what it keeps, what it sends and what Claude receives. It describes psst 0.3.0 and later.
 
 ## What it reads
 
@@ -59,7 +59,7 @@ For questions, problems and security reports, write to contact@found-tools.com o
 
 ## プライバシー(日本語)
 
-psst(Phone Notices)は、Windows の Claude Code デスクトップアプリで使う mod です。Android スマホに通知が来ているアプリを出し、中身を Claude Code の中で読めるようにします。ここには、psst が読むもの、残すもの、送るもの、Claude が受け取るものを書きます。psst 0.3.0 からの説明です。
+psst は、Windows の Claude Code デスクトップアプリで使う mod です。Android スマホに通知が来ているアプリを出し、中身を Claude Code の中で読めるようにします。ここには、psst が読むもの、残すもの、送るもの、Claude が受け取るものを書きます。psst 0.3.0 からの説明です。
 
 ### 読むもの
 
