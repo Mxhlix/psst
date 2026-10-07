@@ -1,7 +1,7 @@
 {
   "name": "psst",
-  "displayName": "Phone Notices",
-  "version": "0.3.5",
+  "displayName": "Psst!",
+  "version": "0.3.6",
   "description": "For the Claude Code desktop app on Windows with an Android phone: icons of the apps that have notifications on your phone above the prompt, a count, and /phone to read them; /phone notices on adds a short notice when one arrives. Reads what Windows Phone Link already stores on the PC; makes no network requests and passes no notification content to Claude.",
   "author": {
     "name": "Mxhlix",
