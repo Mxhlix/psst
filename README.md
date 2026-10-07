@@ -108,6 +108,7 @@ When something is left out for one of the first three reasons, the last line of 
 - Above the prompt it shows up to 12 icons. A short notice stays 8 seconds and is cut at 160 characters. On each check, up to 3 notices show, and any more become one line.
 - psst can read a file of up to 4 MB. This is a limit Claude Code sets for mods. If Phone Link's notifications file is bigger, psst shows a message in place of the count (see Troubleshooting).
 - psst makes no network requests. The only file it writes is its own store, which holds whether the short notice is on or off.
+- psst hooks Claude Code's `command.run` only to answer its own `/phone` command; the hook is registered for `phone` alone. It does not see or change any other command.
 - With the short notice on, a notice appears when a notification is new, or when its time, title or text changes.
 - If Phone Link's data is not found when the session starts, psst says so and does not look again in that session. After pairing a phone, start a new session.
 - With several phones linked, psst uses the first phone folder it finds, unless `databaseFolder` is set.
@@ -258,6 +259,7 @@ psst は、スマホに通知が来ているアプリを Claude Code のデス�
 - 入力欄の上のアイコンは最大12個です。短い表示は8秒出て、160文字で切ります。1回の確認で出すのは3件までで、それより多い分は1行にまとめます。
 - psst が読めるのは1ファイル 4MB までです。これは Claude Code が mod に決めている上限です。スマートフォン連携の通知のファイルがこれより大きいと、右下の件数の代わりに理由の文が出ます(困ったときを見てください)。
 - ネットにはつなぎません。psst が書くファイルは、短い表示のオンとオフを残す保存ファイル1つだけです。
+- psst が Claude Code の `command.run` を使うのは、自分の `/phone` コマンドを受け取るためだけです。受け取る相手を `phone` だけに絞って登録しています。ほかのコマンドを見たり変えたりはしません。
 - 短い表示がオンのときは、通知が新しいときと、時刻か題名か本文が変わったときに表示が出ます。
 - セッションを始めたときにスマートフォン連携のデータが見つからないと、そのセッションの間は探し直しません。スマホをつないでから、新しいセッションを始めてください。
 - セッションごとに psst が動くので、セッションが2つあれば、それぞれに表示が出ます。
