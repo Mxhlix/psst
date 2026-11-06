@@ -1,5 +1,7 @@
 # Psst!
 
+[![Psst! in 34 seconds: open the video (MP4, 2.5 MB)](assets/promo.png)](https://github.com/Mxhlix/psst/releases/download/v0.3.7/psst-promo.mp4)
+
 The name is *psst*, the quiet sound you make to catch someone's attention. The count at the bottom right reads `psst 📱 3`: your phone has something for you.
 
 **Scope: the Claude Code desktop app (the Code tab) on Windows, with an Android phone linked through Phone Link.** Other places Claude Code runs are outside that scope. See [Outside the scope](#outside-the-scope).
@@ -77,11 +79,11 @@ The desktop app runs the installed copy, not your folder. After changing the fol
 
 The desktop app has no settings screen for mods. You can ask Claude, for example "What is in psst's ignore list?", "Add Google Play services to psst's ignore list" or "Remove X from psst's ignore list". The settings live under `pluginConfigs` in `~/.claude/settings.json`. Claude reads and edits that file for you, and Claude Code may ask you to approve the edit.
 
-You can also edit `~/.claude/settings.json` by hand. The desktop app keeps psst's settings under `pluginConfigs` > `psst@inline` > `options`, whichever marketplace psst came from. A terminal session uses `psst@<marketplace>`, such as `psst@psst`.
+You can also edit `~/.claude/settings.json` by hand. psst's settings are under `pluginConfigs` > `psst@<marketplace>` > `options`, such as `psst@psst`. Versions of the desktop app before October 2026 read `psst@inline` instead. If a change does not apply in the desktop app, put the same `options` under `psst@inline` too.
 
 When tested in the desktop app, a change to `ignore` applied without restarting.
 
-The short notice is not one of these settings. `/phone notices on` and `/phone notices off` switch it at once in that session. psst keeps the choice in its own store, a file Claude Code keeps for each mod under `~/.claude/plugins/store/` (in the desktop app, `psst_inline-<id>.json`), and later sessions start with it. Sessions that are already open take it up when they next start.
+The short notice is not one of these settings. `/phone notices on` and `/phone notices off` switch it at once in that session. psst keeps the choice in its own store, a file Claude Code keeps for each mod under `~/.claude/plugins/store/` (`psst_<marketplace>-<id>.json`. Versions of the desktop app before October 2026 used `psst_inline-<id>.json`, so after an update to the app the notice starts off once more), and later sessions start with it. Sessions that are already open take it up when they next start.
 
 ## What is shown and what is left out
 
@@ -187,6 +189,8 @@ For questions, problems and security reports, open an issue at https://github.co
 
 ## 日本語
 
+紹介動画(34秒、英語、MP4 2.5MB): https://github.com/Mxhlix/psst/releases/download/v0.3.7/psst-promo.mp4
+
 名前の psst は、英語でそっと人の注意を引くときに出す「ねえ、ちょっと」にあたる音です。右下に `psst 📱 3` と出て、スマホに何か来ていることを小声で知らせる、という意味で付けました。
 
 **対象は、Windows の Claude Code デスクトップアプリ(Code タブ)と、スマートフォン連携でつないだ Android スマホの組み合わせです。** それ以外の場所は対象外です。
@@ -249,9 +253,9 @@ psst は、スマホに通知が来ているアプリを Claude Code のデス�
 
 ### 設定の確認と変更
 
-デスクトップアプリには mod の設定画面がありません。Claude に「psst の ignore に何が入ってる?」「X を psst の ignore に足して」のように頼むと、Claude が `~/.claude/settings.json` の `pluginConfigs` を読んで書き換えます。書き換えの前に許可を求められることがあります。手で書き換えるときは、デスクトップアプリでは `pluginConfigs` の `psst@inline` の `options` です。デスクトップアプリで試したときは、ignore の変更が起動し直さずに効きました。
+デスクトップアプリには mod の設定画面がありません。Claude に「psst の ignore に何が入ってる?」「X を psst の ignore に足して」のように頼むと、Claude が `~/.claude/settings.json` の `pluginConfigs` を読んで書き換えます。書き換えの前に許可を求められることがあります。手で書き換えるときは、`pluginConfigs` の `psst@<marketplace>` の `options` です(例: `psst@psst`)。2026年10月より前のデスクトップアプリは `psst@inline` を読んでいました。デスクトップアプリで変更が効かないときは、`psst@inline` にも同じ `options` を書いてください。デスクトップアプリで試したときは、ignore の変更が起動し直さずに効きました。
 
-届いたときの短い表示は、この設定には入っていません。`/phone notices on` と `/phone notices off` を打つと、そのセッションではすぐに切り替わります。psst はどちらにしたかを、Claude Code が mod ごとに用意する保存ファイルに残します。置き場所は `~/.claude/plugins/store/` の下で、デスクトップアプリでは `psst_inline-<番号>.json` です。次のセッションは、残した設定のまま始まります。すでに開いているほかのセッションは、次に始めたときから同じになります。
+届いたときの短い表示は、この設定には入っていません。`/phone notices on` と `/phone notices off` を打つと、そのセッションではすぐに切り替わります。psst はどちらにしたかを、Claude Code が mod ごとに用意する保存ファイルに残します。置き場所は `~/.claude/plugins/store/` の下で、名前は `psst_<marketplace>-<番号>.json` です。2026年10月より前のデスクトップアプリは `psst_inline-<番号>.json` を使っていたので、アプリの更新のあとは短い表示がもう一度オフから始まります。次のセッションは、残した設定のまま始まります。すでに開いているほかのセッションは、次に始めたときから同じになります。
 
 ### 仕様
 
