@@ -1,5 +1,7 @@
 # Psst!
 
+**No longer maintained.** psst stopped working with Phone Link 1.26092.119.0 (November 2026). That version encrypts the files on the PC that psst reads, and a mod cannot open them, so psst shows `could not read Phone Link notifications` and no icons or count. The repository stays up as it is.
+
 [![Psst! in 34 seconds: open the video (MP4, 2.5 MB)](assets/promo.png)](https://github.com/Mxhlix/psst/releases/download/v0.3.7/psst-promo.mp4)
 
 The name is *psst*, the quiet sound you make to catch someone's attention. The count at the bottom right reads `psst 📱 3`: your phone has something for you.
@@ -188,6 +190,8 @@ For questions, problems and security reports, open an issue at https://github.co
 ---
 
 ## 日本語
+
+**更新を停止しました。** psst は、2026年11月のスマートフォン連携 1.26092.119.0 から動かなくなりました。この版から、psst が読んでいた PC 上のファイルが暗号化され、mod からは開けなくなったためです。右下には `could not read Phone Link notifications` が出て、アイコンと件数は出ません。リポジトリはこのまま残します。
 
 紹介動画(34秒、英語、MP4 2.5MB): https://github.com/Mxhlix/psst/releases/download/v0.3.7/psst-promo.mp4
 
